@@ -55,7 +55,7 @@
         <br><br><br><br><br><br>
     </form>
 
-    <!-- <?php
+    <?php
         
         if(!empty($name)) {
         echo "The Inserted Name: " . $name . "<br>";
@@ -64,7 +64,7 @@
             echo "The Comment inserted is: " . $comment;
         } 
         echo"<br>" . "The File Name is " . htmlspecialchars($filePath);
-    ?> -->
+    ?>
 </body>
 
 </html>
