@@ -19,7 +19,7 @@
     <?php
     //Firstly Define All the variables to use
     $filePath = htmlspecialchars($_SERVER["PHP_SELF"]);
-    $name = $nameErr = $comment = $commentErr = $email = $emailErr = "";
+    $name = $nameErr = $comment = $commentErr = "";
         if(empty($_POST["name"])) {
             $nameErr = "Name is Required..";
         }
@@ -31,15 +31,6 @@
             $comment = "";
         } else {
             $comment = test_input($_POST["comment"]);
-        }
-
-        if(empty($_POST["email"])) {
-            $emailErr = "Email Not Given..";
-        } else {
-            $email = test_input($_POST["email"]);
-            if(!filter_var($email,FILTER_VALIDATE_EMAIL)) {
-                $emailErr = "Invalid Email Format";
-            }
         }
 
         function test_input($data) {
@@ -54,10 +45,6 @@
     <form method="POST" action = "<?php echo htmlspecialchars($_SERVER["PHP_SELF"]) ?>">
         Name:<input type="text" name="name" value="<?php echo $name; ?>">
         <span class = "error">* <?php echo $nameErr; ?></span>
-        <br><br>
-
-        Email:<input type="email" name = "email" value = "<?php echo $email; ?>">
-        <span class = "error">* <?php echo $emailErr;?></span>
         <br><br>
       
         Comment: <textarea name="comment" rows="5" cols="40"><?php echo $comment;?></textarea>
@@ -77,8 +64,6 @@
             echo "The Comment inserted is: " . $comment;
         } 
         echo"<br>" . "The File Name is " . htmlspecialchars($filePath);
-
-        
     ?>
 </body>
 
