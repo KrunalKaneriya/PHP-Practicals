@@ -12,5 +12,9 @@
         $_SESSION["email"] = $_REQUEST["email"] . "<br>";
         echo "The Email is : " .$_SESSION["email"] . "<br>";
         ?>
+
+    <?php
+        session_destroy();
+    ?>
 </body>
 </html>
