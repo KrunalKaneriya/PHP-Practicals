@@ -11,6 +11,7 @@
         echo  "The Number is : " .$_SESSION["number"] . "<br>";
         $_SESSION["email"] = $_REQUEST["email"] . "<br>";
         echo "The Email is : " .$_SESSION["email"] . "<br>";
+        $_SESSION[""]
         ?>
 </body>
 </html>

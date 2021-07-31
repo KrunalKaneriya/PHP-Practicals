@@ -10,10 +10,19 @@
 
     <form action="s3.php" method="post">
         <?php
+        if($_SESSION["name"] == "abc") {
+            echo "Invalid Name" . "<br>";
+        }
+        else {
             $_SESSION["name"] = $_REQUEST["name"];
-            $_SESSION["number"] = $_REQUEST["number"];
             echo "The Name is : " . $_SESSION["name"] . "<br>";
+        }
+            
+            $_SESSION["number"] = $_REQUEST["number"];
+            $_SESSION["gender"] = $_REQUEST["gender"];
+            
             echo "The Number is :" .$_SESSION["number"] . "<br>"; 
+            echo "The Gender Selected is: " . $_SESSION["gender"] . "<br>";
         ?>
 
         Email ID: <input type="email" name="email" id="">
