@@ -12,10 +12,10 @@
 
         <?php
         session_start();
+        $_SESSION["username"] = $_POST["username"];
+        $_SESSION["userpassword"] = $_POST["userpassword"];
         //Getting The Username Posted
-        if(($_POST["username"]!="Krunal") || ($_POST["userpassword"])!="123") {
-            $_SESSION["username"] = $_POST["username"];
-            $_SESSION["userpassword"] = $_POST["userpassword"];
+        if(($_SESSION["username"]!="Krunal") || ($_SESSION["userpassword"])!="123") {
             $hyperlink = "<br><br><h3>" . "<a href = 'index.php'>Go Back To Login Page</a>" . "</h3>";
 
             if ($_SESSION["username"] != "Krunal") {
