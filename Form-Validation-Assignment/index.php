@@ -13,18 +13,12 @@
 
 <?php 
     session_start();
-    $nameError = "";
-    $passwordError = "";
-    $_SESSION["defaultname"] = "Krunal";
-    $_SESSION["defaultpassword"] = "123";
-    $_SESSION["username"] = " ";
-    $_SESSION["userpassword"] = "";
 ?>
 
 
 
 
-<body style = "background-color:#F4DFD0;">
+<body style>
     <form method = "POST" action = "welcome.php">
         <center>
             <br>
@@ -32,11 +26,9 @@
         <br><br>
         <label for="name">Enter User Name:</label>
         <input type="text" name="username" id="name">
-        <span class="error">* <?php echo $nameError;?></span>
         <br><br><br>
         <label for="password">Enter Password: </label><span>
         <input type="password" name="userpassword" id="password">
-        <span class = "error"><?php echo $passwordError ?></span>
         <br><br>
         <input class = "btn btn-primary" type="submit" value="Submit">
         </center>

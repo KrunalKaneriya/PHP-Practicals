@@ -4,7 +4,7 @@
     <title>Qualifications</title>
 
 </head>
-<body style = "background-color:#F4DFD0;">
+<body>
     <center>
 
 <?php

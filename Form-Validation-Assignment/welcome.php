@@ -7,7 +7,7 @@
 
 </head>
 
-<body style="background-color:#F4DFD0;">
+<body>
     <center>
 
         <?php
@@ -18,12 +18,12 @@
             $_SESSION["userpassword"] = $_POST["userpassword"];
             $hyperlink = "<br><br><h3>" . "<a href = 'index.php'>Go Back To Login Page</a>" . "</h3>";
 
-            if ($_SESSION["username"] != $_SESSION["defaultname"]) {
+            if ($_SESSION["username"] != "Krunal") {
                 $nameError = "Name is Invalid";
                 echo "<br><br><h3>" . $nameError . "</h3>";
             }
 
-            if ($_SESSION["userpassword"] != $_SESSION["defaultpassword"]) {
+            if ($_SESSION["userpassword"] != "123") {
                 $passwordError = "Password is Invalid";
                 echo "<br><br><h3>" . $passwordError . "</h3>" . "<br><br>";
             }
