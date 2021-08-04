@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("p").click( function(){
+                $(this).hide();
+            });
+
+            $(".color-changer").click(function () {
+                $(".color-changer").css("color","green");
+            });
+
+            $("h2").click(function() {
+                $(this).html("<u><b>This is the Changed Style of Font H2<b><u>");
+            });
+
+            var mouse_event = $("#mouse-event");
+            $(mouse_event).mouseover(function() {
+                $(this).text("The Text is Now Changed. Now Hover Out of The Tag");
+            });
+            $(mouse_event).mouseleave(function() {
+                $(this).text("This Text is going to be Changed when you hover over this via mouse");
+            });
+        });
+    </script>
+    <title>HTML DOM Manipulation</title>
+</head>
+<body>
+
+    <h2>This is the Default Style of Font H2</h2>
+
+    <p>This is the first Tag of paragraph</p>
+    <p>Click Me to hide me</p>
+    <p>Click me also</p>
+
+    <h1 class="color-changer">This Text is going to be coloured Red</h1>
+
+    <h1 id = "mouse-event">This Text is going to be Changed when you hover over this via mouse</h1>
+
+    
+</body>
+</html>
