@@ -1,0 +1,78 @@
+p {
+    font-size: 20px;
+    color: blueviolet;
+}
+
+#fade {
+    position:relative;
+    display: flex;
+    width: 100%;
+    height:250px;
+    background-color: #D8E3E7;
+    flex-direction: row;
+    justify-content: space-evenly; /*This is used to give equal spaces to boxes in horizontal(main) axis*/
+    align-items: center /*This is used to give spaces to boxes in vertical(cross) axis*/;
+}
+
+#container1 {
+    width: 200px;
+    height:200px;
+    background-color: #50CB93;
+}
+#container2 {
+    width: 200px;
+    height:200px;
+    background-color: #233E8B;
+}
+#container3 {
+    width: 200px;
+    height:200px;
+    background-color: #DF711B;
+}
+#container4 {
+    width: 200px;
+    height:200px;
+    background-color: #865439;
+}
+
+h1 {
+    color:#0F52BA;
+    text-align: center;
+}
+
+#hideandshow{
+    background-color:#F0F0CB;
+}
+
+#buttons-group{
+    display: flex;
+    justify-content: space-around;
+}
+
+#slideup,#slideuppanel,#slidedown,#slidedownpanel,#slidetoggle,#slidetogglepanel{
+    text-align: center;
+}
+
+#slidedownpanel,#slidetogglepanel{
+    display: none;
+}
+
+#animate{
+    display: flex;
+    background-color: #FF3D68;
+    justify-content: center;
+    width:100%;
+    height: 250px;
+    align-items: center;
+}
+
+#animatecontainer1 {
+    width: 200px;
+    height:200px;
+    background-color: #7C83FD;
+    position: absolute;
+}
+
+#animatecontainer1 p {
+    text-align: center;
+}

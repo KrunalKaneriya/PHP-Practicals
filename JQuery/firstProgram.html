@@ -2,43 +2,61 @@
 <html lang="en">
 <head>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script>
-        $(document).ready(function () {
-            $("p").click( function(){
-                $(this).hide();
-            });
-
-            $(".color-changer").click(function () {
-                $(".color-changer").css("color","green");
-            });
-
-            $("h2").click(function() {
-                $(this).html("<u><b>This is the Changed Style of Font H2<b><u>");
-            });
-
-            var mouse_event = $("#mouse-event");
-            $(mouse_event).mouseover(function() {
-                $(this).text("The Text is Now Changed. Now Hover Out of The Tag");
-            });
-            $(mouse_event).mouseleave(function() {
-                $(this).text("This Text is going to be Changed when you hover over this via mouse");
-            });
-        });
-    </script>
+    <script src="script.js"></script>
     <title>HTML DOM Manipulation</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-    <h2>This is the Default Style of Font H2</h2>
+    <div id = "hideandshow">
+        <h1>The Hide And Show Functions</h1>
 
-    <p>This is the first Tag of paragraph</p>
-    <p>Click Me to hide me</p>
-    <p>Click me also</p>
+        <h3>Click Me To Hide Me And The Text Will Disappear</h3>
+        <button id = "showbutton">Show Me Again</button>
+        <button id = "togglebutton">Toggle The Text</button>
+    </div>
+    <br>
 
-    <h1 class="color-changer">This Text is going to be coloured Red</h1>
 
-    <h1 id = "mouse-event">This Text is going to be Changed when you hover over this via mouse</h1>
-
+    <h1>The Fades Functions</h1>
+    <div id ="fade">
+        
+        <div id = "container1" hidden></div>
+        
+        <div id = "container2"></div>
+        <div id = "container3"></div>
+        <div id = "container4"></div>
+        
+    </div>
     
+    <div id = "buttons-group">
+        <button id = "fadein">Fade In</button>
+        <button id = "fadeout">Fade Out</button>
+        <button id = "fadetoggle">Fade Toggle</button>
+        <button id = "fadeto">Fade To</button>
+    </div>
+    
+
+    <br>
+    <h1>Slide Up Function</h1>
+    <div id = "slideup"><h3>Click Me To Hide The Extra Content</h3></div>
+    <div id = "slideuppanel"><h3>Hello World And This is the extra text</h3></div>
+
+    <br>
+    <h1>Slide Down Function</h1>
+    <div id = "slidedown"><h3>Click Me To Show The Extra Content</h3></div>
+    <div id = "slidedownpanel"><h3>Hello World And This is the extra text</h3></div>
+
+
+    <br>
+    <h1>Slide Toggle Function</h1>
+    <div id = "slidetoggle"><h3>Click Me To Show Or Hide The Extra Content</h3></div>
+    <div id = "slidetogglepanel"><h3>Hello World And This is the extra text</h3></div>
+
+    <br>
+    <h1>Animate Functions</h1>
+    <div id = "animate">
+        <div id = "animatecontainer1"></div>
+    </div>
 </body>
 </html>
