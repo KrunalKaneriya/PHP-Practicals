@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>Traversing Elements</title>
+    <style>
+        .siblings * { 
+          display: block;
+          border: 2px solid lightgrey;  
+          color: lightgrey;
+          padding: 5px;
+          margin: 15px;
+        }
+        </style>
+        
+</head>
+<body class="siblings">
+    <div>
+        Div
+        <p>
+            p (first)
+        </p>
+        <p>
+            p (second)
+        </p>
+        <span>
+            span (first)
+        </span>
+        <span>
+            span (second)
+        </span>
+        <h2>
+            h2(first)
+        </h2>
+
+        <!--
+            Siblings 
+            Next
+            NextUntil
+            NextAll
+            prev()
+            prevAll()
+            prevUntil()
+        -->
+    </div>
+
+    
+   <script>
+       $(document).ready(function() {
+            $("h2").siblings("span").css({"color":"red" , "border": "2px solid red"});
+       });
+   </script>
+</body>
+</html>

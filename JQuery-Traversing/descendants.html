@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>Traversing Elements</title>
+    <style>
+        .descendants * { 
+          display: block;
+          border: 2px solid lightgrey;
+          color: lightgrey;
+          padding: 5px;
+          margin: 15px;
+        }
+        </style>
+</head>
+<body>
+    <div class = "descendants">Div
+       <p class = "first">
+           p child
+           <span>
+               Span grandchild
+           </span>
+       </p>
+
+       <p>
+        p child
+        <span>
+            Span grandchild
+        </span>
+        </p>
+    </div>
+
+    <script>
+        $(document).ready(function() {
+            $("div").find("span").css({"color":"red","border":"2px solid red"});
+        });
+    </script>
+</body>
+</html>

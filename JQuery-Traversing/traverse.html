@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>Traversing Elements</title>
+    <style>
+        .ancestors * { 
+          display: block;
+          border: 2px solid lightgrey;
+          color: lightgrey;
+          padding: 5px;
+          margin: 15px;
+        }
+        </style>
+</head>
+<body>
+    <div class = "ancestors">
+        <div> Div(Great Grand Parent)
+            <ul>
+                ul (Grand Parent)
+                <li>
+                    li Parent
+                    <span>
+                        Span Children
+                    </span>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function() {
+            $("span").parentsUntil("ul").css({"color":"red","border":"2px solid red"});
+        });
+    </script>
+</body>
+</html>
