@@ -1,6 +1,6 @@
-<?php 
+<?php
 
-    $serverName = "localhost";
+$serverName = "localhost";
     $userName = "root";
     $password = "";
     $database = "STUDENT";
@@ -64,6 +64,25 @@
     //         echo "Error Deleting Table.";
     //         echo $conn->error;
     //     }
+<<<<<<< HEAD
+=======
+
+    $selectQuery = "SELECT * FROM STUDENT1";
+
+    $resultQuery = $conn->query($selectQuery);  
+    // echo gettype($resultQuery); //This creates a new object
+
+    if($resultQuery ->num_rows > 0) {
+        while($row = $resultQuery ->fetch_assoc()) {
+            echo "<br><br>" .  " ID: " . $row["ID"] . " First Name: " . $row["FIRST_NAME"] . " Last Name: " . $row["LAST_NAME"] . " Email: " . $row["EMAIL"];
+            
+        }
+        
+    }
+    else {
+        echo "Error In Displaying Table..";
+    }
+>>>>>>> fba118b0cec7f488319d4dde8266beff23be013e
 
         $conn->close();.
 
