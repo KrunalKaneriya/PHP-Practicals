@@ -55,17 +55,17 @@
 
     // $sql = "UPDATE STUDENT1 SET LAST_NAME = 'KANERIYA' WHERE ID = 2;";
 
-    $sql = "DROP TABLE STUDENT1;";
+    // $sql = "DROP TABLE STUDENT1;";
 
-     if($conn->query($sql)) {
-            echo "Data Deleted";
-        }
-        else {
-            echo "Error Deleting Table.";
-            echo $conn->error;
-        }
+    //  if($conn->query($sql)) {
+    //         echo "Data Deleted";
+    //     }
+    //     else {
+    //         echo "Error Deleting Table.";
+    //         echo $conn->error;
+    //     }
 
-        $conn->close();
+        $conn->close();.
 
 
 ?>
