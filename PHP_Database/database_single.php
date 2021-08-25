@@ -64,8 +64,6 @@ $serverName = "localhost";
     //         echo "Error Deleting Table.";
     //         echo $conn->error;
     //     }
-<<<<<<< HEAD
-=======
 
     $selectQuery = "SELECT * FROM STUDENT1";
 
@@ -82,9 +80,8 @@ $serverName = "localhost";
     else {
         echo "Error In Displaying Table..";
     }
->>>>>>> fba118b0cec7f488319d4dde8266beff23be013e
 
-        $conn->close();.
+        $conn->close();
 
 
 ?>

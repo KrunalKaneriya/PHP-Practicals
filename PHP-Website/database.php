@@ -73,6 +73,6 @@
 ?>
 
 <?php 
-    header("location:sign-in.html");
+    header("location:index.html");
 
 ?>

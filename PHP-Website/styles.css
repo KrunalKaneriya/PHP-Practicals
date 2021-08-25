@@ -1,0 +1,186 @@
+html {
+    height:100%;
+}
+body{
+    background-image: radial-gradient( circle 263px at 100.2% 3%,  rgba(12,85,141,1) 31.1%, rgba(205,181,93,1) 36.4%, rgba(244,102,90,1) 50.9%, rgba(199,206,187,1) 60.7%, rgba(249,140,69,1) 72.5%, rgba(2, 32, 44, 0.856) 72.6% );    
+}
+
+#signup {
+   width:50%;
+   height:510px;
+}
+
+#signup h2 {
+    text-align: center;
+    
+}
+
+#form-main{
+    border-radius: 20px;
+    width:50%;
+    height:550px;
+    
+    position:absolute;
+    right:3%;
+    top:6%;
+
+    background: rgba( 255, 255, 255, 0.13 );
+    box-shadow: 0 8px 32px 3px rgba( 31, 38, 135, 0.35 );
+    backdrop-filter: blur( 9.0px );
+    -webkit-backdrop-filter: blur( 9.0px );
+    border-radius: 16px;
+    border: 1px solid rgba( 255, 255, 255, 0.13 );
+}
+
+.btn-group {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    
+    
+}
+
+#title{
+   position: absolute;
+   left:10%;
+   top:4%;
+}
+
+.sign-up-heading {
+    top:10px;
+    position: relative;
+    left:40%;
+}
+
+.main-animation{
+    width:35%;
+    height: 70%;
+    position:absolute;
+    left:5%;
+    top:25%;
+    
+    
+
+}
+
+.circle {
+    width:130px;
+    height:130px;
+    background-image: radial-gradient( circle farthest-corner at 1.5% 1.4%,  rgba(159,227,255,1) 0%, rgba(255,177,219,1) 100.2% );
+    border-radius: 100%;
+    position: absolute;
+    right:39%;
+    
+}
+
+
+
+/* Sign in PAge */
+#sign-in-body {
+   background-image: radial-gradient( circle 590px at 8.2% 13.8%,  rgb(63, 79, 104) 0%, rgba(46, 32, 65, 0.993) 90% );
+}
+
+#sign-in {
+    width: 400px;
+    height:420px;
+    position: relative;
+    margin:60px auto;
+    background: rgba( 255, 255, 255, 0.05 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 10.0px );
+    -webkit-backdrop-filter: blur( 10.0px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+
+#sign-in h1 {
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    line-height: 70px;
+    background: rgba( 255, 255, 255, 0.05 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 3.5px );
+    -webkit-backdrop-filter: blur( 3.5px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );  
+
+
+}
+
+
+.input-group {
+    width:80%;
+    left:10%;
+}
+
+.main-heading {
+    text-align: center;
+    padding-top: 10px;
+}
+
+/*Home Page CSS*/
+#home-page-body {
+    position: relative;
+    background-image: none;
+    overflow: hidden;
+    background-image: linear-gradient( 68.4deg,  rgba(248,182,204,1) 0.5%, rgba(192,198,230,1) 49%, rgba(225,246,240,1) 99.8% );
+}
+#logo-image {
+    height: 50px;
+    width: 50px;
+}
+
+#body-circle {
+    position:absolute;
+    right: -260px;
+    width: 600px;
+    height: 600px;
+    border-radius:100%;
+    background: rgba( 97, 247, 194, 0.1 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 20.0px );
+    -webkit-backdrop-filter: blur( 20.0px );
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    
+    top:240px;
+    
+}
+
+#sqlimage {
+    width: 550px;
+    height: 300px;
+    border-radius: 4px;
+}
+
+#sql-image-div{
+    position: absolute;
+    z-index: 2;
+    right: 50px;
+    top:160px;
+
+}
+
+.text-box {
+    width:55%;
+    height: 300px;
+    position:relative;
+    top:100px;
+    left:30px;
+}
+
+
+/*Feedback CSS*/
+
+#main-box {
+    height:100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#feedback-body {
+    background-image: radial-gradient( circle farthest-corner at -8.9% 51.2%,  rgba(255,124,0,1) 0%, rgba(255,124,0,1) 15.9%, rgba(255,163,77,1) 15.9%, rgba(255,163,77,1) 24.4%, rgba(19,30,37,1) 24.5%, rgba(19,30,37,1) 66% );
+
+}

@@ -1,5 +1,5 @@
 <?php
-
+    session_start();
     $serverName = "localhost";
     $userName = "root";
     $password = "";
@@ -13,12 +13,12 @@
     $searchQuery = "SELECT * FROM INFO WHERE NAME = '$websiteUserName' AND PASSWORD = '$websiteUserPassword';";
     
     if($connection->connect_error) {
-        echo "Database is not Connected<br>";
+        // echo "Database is not Connected<br>";
     }
     else {
         $loginResult = $connection->query($searchQuery);
         if($loginResult->num_rows>0 && $loginResult->num_rows==1) {
-            echo "You Are Now Logged In..";
+            // echo "You Are Now Logged In..";
 
                     // Now register Use All Information
             if($loginResult->num_rows==1) {
@@ -30,7 +30,8 @@
             $_SESSION["ID"] = $row["ID"];
             $_SESSION["email"] = $row["EMAIL"];
     
-            echo "<h1>Welcome  ". $_SESSION["username"] . "</h1>";
+            // echo "<h1>Welcome  ". $_SESSION["username"] . "</h1>";
+            header("location:home-page.php");
         }
 
         else  {
