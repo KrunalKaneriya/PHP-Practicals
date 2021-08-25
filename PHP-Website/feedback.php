@@ -11,10 +11,11 @@ session_start();
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
     <link rel="stylesheet" href="styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 
 <body id="feedback-body">
-    <form action="">
+    <form method="POST" action="feedback-database.php">
     <div class="container-fluid" id="main-box">
         <div class="row row-1">
             <div class="col ">
@@ -35,7 +36,7 @@ session_start();
             </div>
             <div class="col">
                 <label for="email" class="form-label text-light">Email:</label>
-                <input type="email" name="email" id="email" class="form-control" placeholder="Enter Email" value="<?php echo $_SESSION['email'];    ?>" disabled>
+                <input type="email" name="email" id="email-input" class="form-control" placeholder="Enter Email" value="<?php echo $_SESSION['email'];    ?>" disabled>
             </div>
         </div>
         <div class="row mt-3">
@@ -46,7 +47,7 @@ session_start();
         </div>
         <div class="row mt-4">
             <div class="col">
-                <a href="#" class="btn btn-primary">Submit</a>
+                <button type="submit" id = "submit-btn" class="btn btn-primary">Submit</button>
             </div>
             <div class="col">
                 <button type="reset" class="btn btn-danger">Reset</button>
