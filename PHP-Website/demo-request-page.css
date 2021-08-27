@@ -1,0 +1,20 @@
+/*Request Page*/
+
+.request-page header {
+    
+    height: 120px;
+    position: relative;
+    background-color: aqua;
+}
+
+#logo-image {
+    width: 50px;
+    height: 50px;
+    
+    margin-top: 30px;
+    margin-left:10px;
+}
+
+.left-page {
+    width:48%;
+}

@@ -2,6 +2,7 @@ html {
     height:100%;
 }
 body{
+    
     background-image: radial-gradient( circle 263px at 100.2% 3%,  rgba(12,85,141,1) 31.1%, rgba(205,181,93,1) 36.4%, rgba(244,102,90,1) 50.9%, rgba(199,206,187,1) 60.7%, rgba(249,140,69,1) 72.5%, rgba(2, 32, 44, 0.856) 72.6% );    
 }
 
@@ -123,7 +124,7 @@ body{
 #home-page-body {
     position: relative;
     background-image: none;
-    overflow: hidden;
+    
     background-image: linear-gradient( 68.4deg,  rgba(248,182,204,1) 0.5%, rgba(192,198,230,1) 49%, rgba(225,246,240,1) 99.8% );
 }
 #logo-image {
@@ -169,6 +170,27 @@ body{
     left:30px;
 }
 
+#another-page {
+    width:100%;
+    height:550px;
+    background-color: azure;
+    position: relative;
+    top:280px;
+}
+
+/*Another Page CSS*/
+#another-page h1 {
+    text-align: center;
+    padding-top:40px;
+}
+
+
+
+.logo img {
+    width: 230px;
+    height: 110px;
+    border-radius: 10px;
+}
 
 /*Feedback CSS*/
 
@@ -184,3 +206,4 @@ body{
     background-image: radial-gradient( circle farthest-corner at -8.9% 51.2%,  rgba(255,124,0,1) 0%, rgba(255,124,0,1) 15.9%, rgba(255,163,77,1) 15.9%, rgba(255,163,77,1) 24.4%, rgba(19,30,37,1) 24.5%, rgba(19,30,37,1) 66% );
 
 }
+
