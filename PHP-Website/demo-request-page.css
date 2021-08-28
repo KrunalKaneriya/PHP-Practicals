@@ -1,20 +1,55 @@
 /*Request Page*/
+body {
+    height: 1000px;
+}
 
 .request-page header {
     
     height: 120px;
     position: relative;
-    background-color: aqua;
+    /* background-color: aqua; */
 }
 
 #logo-image {
     width: 50px;
     height: 50px;
-    
     margin-top: 30px;
     margin-left:10px;
 }
 
 .left-page {
-    width:48%;
+    width:40%;
+    
+}
+
+.heading h1 {
+    font-family: "Montserrat";
+    font-weight: 700;
+    
+}
+
+.right-page-demo-link {
+    width: 60%;
+}
+
+.ignored-text{
+    font-size: 0.80em;
+}
+
+.right-page-book-demo {
+    background-color: #FDF6F0;
+}
+
+.right-page-book-demo input[type = "text"],input[type="number"]{
+    width:400px;
+}
+.request-form-body p {
+    font-size:0.95em;
+    opacity: 0.8;
+}
+
+.submit-button {
+    width:300px;
+    margin-left: 25%;
+    
 }
