@@ -53,3 +53,33 @@ body {
     margin-left: 25%;
     
 }
+
+
+/*Pricing Page*/
+#information{
+    width:70%;
+    text-align: left;
+    position: absolute;
+    left:18%;
+    top:40%;
+}
+
+#information-2 {
+    width: 70%;
+    text-align: left;
+    position: absolute;
+    left: 18%;
+    top:50%;
+}
+
+.card-group {
+    margin-top: 400px;
+    width: 80%;
+    margin-left: 50px;
+    border: none;
+}
+
+.card-pricing-header {
+    height:100px;
+    border:none;
+}
