@@ -15,11 +15,75 @@
         crossorigin="anonymous"></script>
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet">
+      <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Open+Sans:wght@400;600;700;800&family=Roboto:wght@300;400;700&family=Source+Sans+Pro:wght@300;400;600;700&display=swap"
+        rel="stylesheet">
         <link rel="stylesheet" href="demo-request-page.css">
+        <link rel="stylesheet" href = "navbar.css">
 </head>
 <body>
 
-    <h1 class="display-1 text-bold text-center">Pricing</h1>
+    <nav class="navbar navbar-expand-sm sticky-top mb-5">
+        <div class="container-fluid">
+
+            <a href="home-page.html" class="navbar-brand mx-3">
+                <img src="images/logo.jpeg" alt="Logo" width="70"><span>DataOInfra</span>
+            </a>
+
+            <div class="navbar-collapse collapse">
+                <ul class="navbar-nav">
+                    <div id="first-div" class="divs">
+                        <li class="nav-item">
+                            <a  href="pricing.html" class="nav-link active">Pricing</a>
+                        </li>
+                    </div>
+
+                    <div class="mx-3" id="second-div">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link ">Gallery</a>
+                        </li>
+                    </div>
+
+                    <div class="mx-3" id="third-div">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link divs">Partners</a>
+                        </li>
+                    </div>
+
+                    <div class="mx-3" id="fourth-div">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link ">Feedback</a>
+                        </li>
+                    </div>
+                    <div class="mx-3" id="fifth-div">
+                        <li class="nav-item">
+                            <a href="" class="nav-link">About Us</a>
+                        </li>
+                    </div>
+                    <div class="" id="log-in">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link ">Log In</a>
+                        </li>
+                    </div>
+                    <div class="mx-3 "  id="sign-up">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link ">Sign Up</a>
+                        </li>
+                    </div>
+
+                    <div class="mx-1 " id="demo-button">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link btn text-light">Book Demo</a>
+                        </li>
+                    </div>
+
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+
+    <h1 class="text-center heading">PRICING</h1>
 
     <div id="information">Here <span class="fw-bold">are some prices of available package configurations </span>that have been put according to  
         the use of DataOInfra. In fact every package is custom-made. The price of the package is based on the selected features 
@@ -39,14 +103,25 @@
             <div class="card-body">
                 <p class="text-center">Number of Users</p>
             </div>
-            <div class="card-body">
+            <div class="card-body heading-3">
                 <p class="text-center">Direct Customer Support Time</p>
             </div>
-            <div class="card-body">
+            <div class="card-body heading-4">
                 <p class="text-center">User Training</p>
             </div>
-            <div class="card-body">
+            <div class="card-body heading-5">
                 <p class="text-center">Excel Support</p>
+            </div>
+            <div class="card-body heading-6">
+                <p class="text-center">Api Support</p>
+            </div>
+            <div class="card-body ">
+                <p class="text-center">Product Training Videos</p>
+            </div>
+            <div class="card-body">
+                <p class="text-center">  
+                    Booking
+                </p>
             </div>
         </div>
 
@@ -59,15 +134,30 @@
             <div class="card-body">
                 <p class="text-center">10</p>
             </div>
-            <div class="card-body">
+            <div class="card-body" id="into-week">
                 <p class="text-center">Into Week</p>
             </div>
-            <div class="card-body">
+            <div class="card-body" id="training-header">
                 <p class="text-center">3 training modules, 10 training tickets</p>
             </div>
             <div class="card-body text-center">
                 <p class="material-icons">
                     
+                </p>
+            </div>
+            <div class="card-body text-center api-support">
+                <p class="material-icons">
+                    
+                </p>
+            </div>
+            <div class="card-body text-center">
+                <p class="material-icons">
+                    verified
+                </p>
+            </div>
+            <div class="card-body text-center book-now-1">
+                <p>
+                    <a href="" class="btn btn-success">Book Now</a>
                 </p>
             </div>
         </div>
@@ -76,7 +166,7 @@
         <div class="card">
             <div class="card-header card-pricing-header">
                 <h3 class="text-center">Premium</h3>
-                <h3 class  = "text-center">$75.99/Mon</h3>
+                <h3 class="text-center">$75.99/Mon</h3>
             </div>
             <div class="card-body">
                 <p class="text-center">50</p>
@@ -90,6 +180,21 @@
             <div class="card-body text-center">
                 <p class="material-icons">
                     
+                </p>
+            </div>
+            <div class="card-body text-center api-support">
+                <p class="material-icons">
+                    verified
+                </p>
+            </div>
+            <div class="card-body text-center">
+                <p class="material-icons">
+                    verified
+                </p>
+            </div>
+            <div class="card-body text-center">
+                <p>
+                    <a href="" class="btn btn-success">Book Now</a>
                 </p>
             </div>
         </div>
@@ -111,8 +216,23 @@
                 <p class="text-center">3 training modules, 10 training tickets</p>
             </div>
             <div class="card-body text-center">
+                <span class="material-icons">
+                    verified
+                </span>
+            </div>
+            <div class="card-body text-center api-support">
                 <p class="material-icons">
                     verified
+                </p>
+            </div>
+            <div class="card-body text-center">
+                <p class="material-icons">
+                    verified
+                </p>
+            </div>
+            <div class="card-body text-center">
+                <p>
+                    <a href="" class="btn btn-success">Book Now</a>
                 </p>
             </div>
         </div>
@@ -120,7 +240,7 @@
 
 
         <div class="card">
-            <div class="card-header card-pricing-header">
+            <div class="card-header card-pricing-header custom-made">
                 <h3 class="text-center">Custom Made</h3>
                 <h3 class="text-center">$199.99/Mon</h3>
             </div>
@@ -133,12 +253,30 @@
             <div class="card-body">
                 <p class="text-center">3 training modules, 10 training tickets</p>
             </div>
-            <div class="card-body text-center">
-                <span class="material-icons">
+            <div class="card-body text-center excel-support-last">
+                <p class="material-icons">
                     verified
-                </span>
+                </p>
+            </div>
+            <div class="card-body text-center api-support">
+                <p class="material-icons">
+                    verified
+                </p>
+            </div>
+            <div class="card-body text-center">
+                <p class="material-icons">
+                    verified
+                </p>
+            </div>
+            <div class="card-body text-center">
+                <p>
+                    <a href="" class="btn btn-success">Book Now</a>
+                </p>
             </div>
         </div>
+
+        
+        
     </div>
     
 </body>

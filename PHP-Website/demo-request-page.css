@@ -1,6 +1,6 @@
 /*Request Page*/
 body {
-    height: 1000px;
+    height: 1500px;
 }
 
 .request-page header {
@@ -22,10 +22,10 @@ body {
     
 }
 
-.heading h1 {
-    font-family: "Montserrat";
+.heading h1,.heading {
+    font-family: Montserrat;
     font-weight: 700;
-    
+    font-size:5rem;
 }
 
 .right-page-demo-link {
@@ -61,7 +61,7 @@ body {
     text-align: left;
     position: absolute;
     left:18%;
-    top:40%;
+    top:55%;
 }
 
 #information-2 {
@@ -69,17 +69,61 @@ body {
     text-align: left;
     position: absolute;
     left: 18%;
-    top:50%;
+    top:70%;
 }
 
 .card-group {
     margin-top: 400px;
     width: 80%;
-    margin-left: 50px;
+    margin-left: 10%;
     border: none;
 }
 
+
 .card-pricing-header {
-    height:100px;
-    border:none;
+    height:180px;
+    /* border:none; */
+    
+    border-radius: 10px;
+    color:#222831;
+    align-items: center;
+    justify-content: center;
+    display:inherit;
+    flex-wrap: wrap;
+}
+
+.card-pricing-header:hover{
+    transition: background-color 0.5s;
+    background-color: #1E6F5C;
+    color:white;
+}
+
+.custom-made{
+    background-color: #1E6F5C;
+    color:whitesmoke;
+}
+
+
+
+/*Pricing Table Positioning CSS*/
+.heading-3 {
+    height: 67px;   
+}
+.heading-4 {
+    height: 78px;
+}
+
+/* #training-header {
+    padding-top: 20px;
+    height: 83px;
+} */
+.excel-support-last{
+    height:61px;
+}
+.book-now-1 {
+    height:80px;
+}
+
+#into-week {
+    height: 68px;
 }

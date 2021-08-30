@@ -1,0 +1,63 @@
+body {
+    background-color: #444444;
+}
+.title,#partner {
+    position: relative;
+    top:100px;
+    font-family: Montserrat;
+    font-weight: 700;
+    font-size:3.8rem;
+}
+.sub-title {
+    position: relative;
+    font-family: "Open Sans";
+    top:100px;
+    left: 168px;
+    font-weight: 400;
+    font-size:1.5rem;
+    width:75%;
+}
+
+#partner-section {
+    height: 250px;
+}
+#title-container {
+    height:350px;
+}
+#company-images-div {
+    width: 80%;
+    height:450px;
+}
+
+/*Company Logo Images*/
+#carlsberg,#citi,#ibm,#apple,#accenture,#teradata,#fzn,#intel {
+    position:relative;
+    top: 50px;
+}
+#citi {
+    top:30px;
+}
+#apple {
+    top:13px;
+
+}
+#accenture{
+    top:18px;
+}
+#teradata {
+    top: 29px;
+}
+#fzn {
+    top: 30px;
+}
+#intel {
+    top: 20px;
+    left: 15px;
+}
+
+/*Why Partner With Us Section*/
+
+.icon {
+    float: left;
+    margin-right: 32px;
+}

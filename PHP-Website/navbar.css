@@ -1,0 +1,118 @@
+.navbar {
+    font-family: "Open Sans";
+    font-weight: 600;
+    font-size:1.2rem;
+    height: 110px;
+    position:-webkit-sticky;
+    background-color: #444444;
+}
+
+#first-div{
+    margin-left:90px;
+    margin-right:1rem;
+    text-align: center;
+    
+
+}
+
+#first-div::after {
+    content: "";
+    position: absolute;
+    width: 0px;
+    height: 3px;
+    background-color: #1c8adf;
+    left: 328px;
+    transition:width 300ms;
+}
+
+#first-div:hover::after {
+    width:80px;
+}
+
+#second-div::after {
+    content: "";
+    position: absolute;
+    width: 0px;
+    height: 3px;
+    background-color: #1c8adf;
+    left: 440px;
+    transition:width 300ms;
+}
+
+#second-div:hover::after {
+    width:80px;
+}
+
+
+#third-div::after {
+    content: "";
+    position: absolute;
+    width: 0px;
+    left: 550px;
+    height: 3px;
+    background-color: #1c8adf;
+    transition:width 300ms;
+}
+
+#third-div:hover::after {
+    width:100px;
+}
+
+#fourth-div::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 3px;
+    background-color: #1c8adf;
+    transition: width 300ms;
+}
+
+#fourth-div:hover::after {
+    width: 105px;
+}
+
+#fifth-div::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height:3px;
+    background-color: #1c8adf;
+    transition:width 300ms;
+}
+
+#fifth-div:hover::after {
+    width:100px
+}
+#log-in {
+    margin-left: 70px;
+}
+#log-in::before,#sign-up::before {
+    content: "";
+    position: absolute;
+    width:0;
+    height:3px;
+    background-color: #1c8adf;
+    transition:width 300ms;
+}
+#log-in:hover::before {
+    width:70px;
+}
+#log-in::after,#sign-up::after {
+    content:"";
+    position:absolute;
+    width: 0;
+    height:3px;
+    background-color: #1c8adf;
+    transition: width 300ms;
+}
+#log-in:hover::after {
+    width:70px;
+}
+
+#sign-up:hover::before,#sign-up:hover::after {
+    width:80px;
+}
+#demo-button{
+    background-color: #1c8adf;
+    border-radius: 8px;
+}

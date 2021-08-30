@@ -19,51 +19,100 @@ session_start();
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"
         integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF"
         crossorigin="anonymous"></script>
+        <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Open+Sans:wght@400;600;700;800&family=Roboto:wght@300;400;700&family=Source+Sans+Pro:wght@300;400;600;700&family=Open+Sans:wght@300;400;600;700;800&family=Lato:wght@300;400;700;900&family=Ubuntu:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
+
 </head>
 <link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="navbar.css">
 
 <body id="home-page-body">
 
-    <nav class="navbar navbar-expand-sm">
+    <nav class="navbar navbar-expand-sm sticky-top">
         <div class="container-fluid">
-            <a href="#" class="navbar-brand">
-                <img id="logo-image" src="images/logo-1.png" alt="">&nbsp;&nbsp;&nbsp;DataOInfra
+
+            <a href="home-page.html" class="navbar-brand mx-3">
+                <img src="images/logo.png" alt="Logo" width="70"><span class="text-light ms-3">DataOInfra</span>
             </a>
 
-            <ul class="navbar-nav mr-auto">
+            <div class="navbar-collapse collapse">
+                <ul class="navbar-nav">
+                    <div id="first-div" class="divs">
+                        <li class="nav-item">
+                            <a  href="pricing.html" class="nav-link active text-light">Pricing</a>
+                        </li>
+                    </div>
+
+                    <div class="mx-3" id="second-div">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link text-light">Gallery</a>
+                        </li>
+                    </div>
+
+                    <div class="mx-3" id="third-div">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link text-light">Partners</a>
+                        </li>
+                    </div>
+
+                    <div class="mx-3" id="fourth-div">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link text-light">Feedback</a>
+                        </li>
+                    </div>
+                    <div class="mx-3" id="fifth-div">
+                        <li class="nav-item">
+                            <a href="" class="nav-link text-light">About Us</a>
+                        </li>
+                    </div>
+                    <div class="" id="log-in">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link text-light">Log In</a>
+                        </li>
+                    </div>
+                    <div class="mx-3 "  id="sign-up">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link text-light">Sign Up</a>
+                        </li>
+                    </div>
+
+                    <div class="mx-1 " id="demo-button">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link btn text-light">Book Demo</a>
+                        </li>
+                    </div>
 
 
 
 
-                <li class="nav-item mx-2 mt-2">
-                    <b> Welcome
-                        <?php echo $_SESSION["username"]; ?>
-                    </b>
-                </li>
-                <li class="nav-item mx-2">
-                    <a href="feedback.php" class="btn btn-warning">Feedback</a>
-                </li>
-                <li class="nav-item mx-2">
-                    <a href="index.html" class="btn btn-danger">Log Out</a>
-                </li>
 
 
-            </ul>
+
+
+
+
+
+
+
+                </ul>
+
+            </div>
         </div>
-
     </nav>
 
     <!-- <div id="body-circle">
 
     </div> -->
     <div id="sql-image-div">
-        <img src="images/sql.png" alt="Computer Image" id="sqlimage">
+        <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+<lottie-player src="https://assets5.lottiefiles.com/packages/lf20_ko8ud57v.json"  background="transparent"  speed="1"  style="width: 520px; height: 400px;"  loop  autoplay></lottie-player>
     </div>
 
     <div class="text-box">
-        <h1 class="display-4 text-black-90">Need Database Solutions.</h1>
-        <h1 class="display-6 text-black-70">We Are Here To Help You..</h1>
-        <h2 class="display-6 text-black-50">DataOInfra Provides Best Infrastructure To Maintain the Database For Large
+        <h1 class="display-4 text-light">Need Database Solutions.</h1>
+        <h1 class="display-6 text-60 text-light">We Are Here To Help You..</h1>
+        <h2 class="display-6 text-30 text-light">DataOInfra Provides Best Infrastructure To Maintain the Database For Large
             Companies.</h1>
     </div>
 
