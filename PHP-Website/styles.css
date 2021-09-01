@@ -430,3 +430,33 @@ h5.card-title{
     height:500px;
     background-color: #444444;
 }
+
+
+/*About US Page*/
+
+#about-us-header {
+    height: 400px;
+    width: 100%;
+    background-color: #444444;
+    padding-top: 100px;
+}
+
+#about-us-title {
+    font-family: Montserrat;
+    font-weight: 700;
+    font-size:5rem;
+    
+}
+
+#about-us-card-title {
+    margin-top:55px;
+    margin-bottom: 55px;
+}
+
+#about-us-info {
+    width: 70%;
+    height: 300px;
+}
+
+/*SnackBar*/
+

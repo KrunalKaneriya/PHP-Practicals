@@ -35,7 +35,11 @@
         }
 
         else  {
-            echo "<h1>Wrong Username Or Password</h1>";
+            echo '<script type = "text/JavaScript">
+                alert("Error In Name or Password");
+                window.location.href = "index.html";
+            </script>';
+            
         }
 
         
@@ -48,3 +52,6 @@
     $connection->close();
 
 ?>
+
+
+

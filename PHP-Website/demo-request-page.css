@@ -22,10 +22,18 @@ body {
     
 }
 
-.heading h1,.heading {
+.heading {
+    height:400px;
+    padding-top: 100px;
+    background-color: #444444;
+
+}
+
+.heading h1 {
     font-family: Montserrat;
-    font-weight: 700;
-    font-size:5rem;
+    font-weight: 800;
+    font-size:4rem;
+    color:white;
 }
 
 .right-page-demo-link {
@@ -59,21 +67,22 @@ body {
 #information{
     width:70%;
     text-align: left;
-    position: absolute;
+    position: relative;
     left:18%;
-    top:55%;
+    top:40%;
+    
 }
 
 #information-2 {
     width: 70%;
     text-align: left;
-    position: absolute;
+    position: relative;
     left: 18%;
-    top:70%;
+    top:40%;
 }
 
 .card-group {
-    margin-top: 350px;
+    margin-top: 150px;
     width: 80%;
     margin-left: 10%;
     border: none;
@@ -126,4 +135,79 @@ body {
 
 #into-week {
     height: 68px;
+}
+
+/*Footer*/
+
+footer {
+    width:100%;
+    height: 300px;
+    position: relative;
+    top:200px;
+    background-color: white;
+    font-family: "Montserrat";
+    
+}
+
+footer h5 {
+    font-weight: 600;
+}
+
+#company-info-footer {
+    margin-top:30px;
+    position:absolute;
+    align-items: center;
+    margin-left:50px;
+    width:30%;
+    
+}
+
+#footer-links {
+    margin-top: 30px;
+    position: absolute;
+    width: 30%;
+    height:200px;
+    /* left: 430px; */
+}
+
+#company-links {
+    width:30%;
+    height:200px;
+    position:absolute;
+    margin-top:30px;
+}
+
+#company-links-list {
+    width:50%;
+    /* margin-left:90px; */
+}
+
+.buttons {
+    width:420px;
+    flex-direction: row;
+    justify-content: space-around;
+    display: flex;
+    margin-bottom: 30px;
+    margin-top:23px;
+}   
+
+/*Pricing Title*/
+
+#pricing-title {
+    width: 100%;
+    height: 400px;
+    background-color: #444444;
+    padding-top:100px;
+}
+
+#pricing-title h1 {
+    font-family: Montserrat;
+    font-weight: 700;
+    font-size:5rem;
+}
+
+#pricing-info {
+    width: 100%;
+    height: 180px;
+    position: relative;
 }

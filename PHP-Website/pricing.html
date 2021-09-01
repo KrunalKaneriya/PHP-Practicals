@@ -19,13 +19,17 @@
         href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Open+Sans:wght@400;600;700;800&family=Roboto:wght@300;400;700&family=Source+Sans+Pro:wght@300;400;600;700&display=swap"
         rel="stylesheet">
         
+        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+
         <link rel="stylesheet" href="demo-request-page.css">
+        
         <link rel="stylesheet" href = "navbar.css">
         
 </head>
 <body>
 
-    <nav class="navbar navbar-expand-sm sticky-top mb-5">
+    <nav class="navbar navbar-expand-sm sticky-top">
         <div class="container-fluid">
 
             <a href="home-page.html" class="navbar-brand mx-3">
@@ -42,40 +46,40 @@
 
                     <div class="mx-3" id="second-div">
                         <li class="nav-item">
-                            <a href="#" class="nav-link  text-white">Gallery</a>
+                            <a href="gallery.html" class="nav-link  text-white">Gallery</a>
                         </li>
                     </div>
 
                     <div class="mx-3" id="third-div">
                         <li class="nav-item">
-                            <a href="#" class="nav-link text-white">Partners</a>
+                            <a href="partners.html" class="nav-link text-white">Partners</a>
                         </li>
                     </div>
 
                     <div class="mx-3" id="fourth-div">
                         <li class="nav-item">
-                            <a href="#" class="nav-link text-white">Feedback</a>
+                            <a href="feedback.php" class="nav-link text-white">Feedback</a>
                         </li>
                     </div>
                     <div class="mx-3" id="fifth-div">
                         <li class="nav-item">
-                            <a href="" class="nav-link text-white">About Us</a>
+                            <a href="about-us.html" class="nav-link text-white">About Us</a>
                         </li>
                     </div>
                     <div class="" id="log-in">
                         <li class="nav-item">
-                            <a href="#" class="nav-link text-white">Log In</a>
+                            <a href="index.html" class="nav-link text-white">Log In</a>
                         </li>
                     </div>
                     <div class="mx-3 "  id="sign-up">
                         <li class="nav-item">
-                            <a href="#" class="nav-link text-white">Sign Up</a>
+                            <a href="sign-up.html" class="nav-link text-white">Sign Up</a>
                         </li>
                     </div>
 
                     <div class="mx-1 " id="demo-button">
                         <li class="nav-item">
-                            <a href="#" class="nav-link btn text-light">Book Demo</a>
+                            <a href="demo-request-page.html" class="nav-link btn text-light">Book Demo</a>
                         </li>
                     </div>
 
@@ -85,16 +89,25 @@
         </div>
     </nav>
 
-    <h1 class="text-center heading">PRICING</h1>
+    <div class="container-fluid" id="pricing-title">
+        <h1 class="text-center text-white">PRICING</h1>
 
-    <div id="information">Here <span class="fw-bold">are some prices of available package configurations </span>that have been put according to  
-        the use of DataOInfra. In fact every package is custom-made. The price of the package is based on the selected features 
-        and number of scripts in the package.
     </div>
+    
+    
+    <div class="container-fluid" id="pricing-info">
+        <div id="information"><p>Here <span class="fw-bold">are some prices of available package configurations </span>that have been put according to  
+            the use of DataOInfra. In fact every package is custom-made. The price of the package is based on the selected features 
+            and number of scripts in the package.</p>
+        </div>
+    
+        <div id="information-2"><p> <span class="fw-bold">You can also get in touch with us</span> for discussing management goals and objectives and to get a better understanding of your
+            enviroment. This will help us design a package according to your needs. </p>
+        </div>
+    </div>
+   
 
-    <div id="information-2"><span class="fw-bold">You can also get in touch with us</span> for discussing management goals and objectives and to get a better understanding of your
-        enviroment. This will help us design a package according to your needs.
-    </div>
+    
 
     <div class="card-group" id="pricing-card">
 
@@ -280,6 +293,74 @@
         
         
     </div>
+
+    <footer class="container-fluid">
+
+        <div class="row">
+            <div class="col">
+                <div id="company-info-footer">
+                    <h5>About Our Company</h5>
+                    <p>DataOInfra is World Class Lineage Platform that automatically scans your data
+                        environment
+                        to build powerful map of all data flows and deliver it through a native UI and other sources
+                        like
+                        presentation to both technical and non-technical users. With DataOInfra, every one gets full
+                        visibility
+                        and control of their data.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col">
+                <div id="footer-links">
+                    <h5 class="text-center">Follow Us On</h5>
+                    <div class="buttons">
+                        <button type="button" class="btn btn-light btn-lg">
+                            <i class="fab fa-twitter"></i>
+                        </button>
+                        <button type="button" class="btn btn-light btn-lg">
+                            <i class="fab fa-facebook"></i>
+                        </button>
+                        <button type="button" class="btn btn-light btn-lg">
+                            <i class="fab fa-instagram"></i>
+                        </button>
+                        <button type="button" class="btn btn-light btn-lg">
+                            <i class="fas fa-envelope"></i>
+                        </button>
+                    </div>
+
+                    <p class="text-center lead">@CopyRight 2021 DataOInfra</p>
+
+                </div>
+            </div>
+
+
+
+            <div class="col">
+
+                <div id="company-links">
+                    <h5 class="text-center">Our Links</h5>
+                    <div id="company-links-list">
+                        <ul>
+                            <li>Home Page</li>
+                            <li>Gallery</li>
+                            <li>Feedback Page</li>
+                            <li>Partners Page</li>
+                            <li>Pricing</li>
+                            <li>Log In</li>
+                            <li>Sign Up</li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+    </footer>
     
 </body>
 </html>
