@@ -85,8 +85,9 @@
 }
 #log-in {
     margin-left: 70px;
+    margin-top:7px;
 }
-#log-in::before,#sign-up::before {
+#sign-up::before{
     content: "";
     position: absolute;
     width:0;
@@ -94,19 +95,14 @@
     background-color: #1c8adf;
     transition:width 300ms;
 }
-#log-in:hover::before {
-    width:70px;
-}
-#log-in::after,#sign-up::after {
+
+#sign-up::after {
     content:"";
     position:absolute;
     width: 0;
     height:3px;
     background-color: #1c8adf;
     transition: width 300ms;
-}
-#log-in:hover::after {
-    width:70px;
 }
 
 #sign-up:hover::before,#sign-up:hover::after {

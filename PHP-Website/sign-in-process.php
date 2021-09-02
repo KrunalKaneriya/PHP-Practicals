@@ -21,24 +21,20 @@
             // echo "You Are Now Logged In..";
 
                     // Now register Use All Information
-            if($loginResult->num_rows==1) {
                 $row = $loginResult->fetch_assoc();
-            }
-            $_SESSION["is_logged_in"]=1;
             $_SESSION["username"] = $row["NAME"];
             $_SESSION["password"] = $row["PASSWORD"];
             $_SESSION["ID"] = $row["ID"];
             $_SESSION["email"] = $row["EMAIL"];
-    
-            // echo "<h1>Welcome  ". $_SESSION["username"] . "</h1>";
-            header("location:home-page.html");
-        }
 
+            header("location:home-page.php");
+        }
         else  {
             echo '<script type = "text/JavaScript">
                 alert("Error In Name or Password");
-                window.location.href = "index.html";
+                window.location.href = "index.php";
             </script>';
+
             
         }
 
@@ -52,6 +48,8 @@
     $connection->close();
 
 ?>
+
+
 
 
 

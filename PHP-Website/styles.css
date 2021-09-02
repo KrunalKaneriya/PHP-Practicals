@@ -163,8 +163,9 @@ html {
 }
 #log-in {
     margin-left: 70px;
+    margin-top:7px;
 }
-#log-in::before,#sign-up::before {
+#sign-up::before {
     content: "";
     position: absolute;
     width:0;
@@ -172,19 +173,14 @@ html {
     background-color: #1c8adf;
     transition:width 300ms;
 }
-#log-in:hover::before {
-    width:70px;
-}
-#log-in::after,#sign-up::after {
+
+#sign-up::after {
     content:"";
     position:absolute;
     width: 0;
     height:3px;
     background-color: #1c8adf;
     transition: width 300ms;
-}
-#log-in:hover::after {
-    width:70px;
 }
 
 #sign-up:hover::before,#sign-up:hover::after {
@@ -246,7 +242,6 @@ html {
     position: relative;
     background-image: none;
     background-color: #444444;
-    /* background-image: linear-gradient( 68.4deg,  rgba(248,182,204,1) 0.5%, rgba(192,198,230,1) 49%, rgba(225,246,240,1) 99.8% ); */
 }
 #logo-image {
     height: 50px;
@@ -314,19 +309,52 @@ html {
     border-radius: 10px;
 }
 
-/*Feedback CSS*/
+/*********************************************************Feedback CSS****************************************/
 
-#main-box {
-    height:100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+
+#feedback-title {
+    font-family: Montserrat;
+    font-weight: 700;
+    font-size: 5rem;
+    padding-top:100px;
+}
+
+
+#feedback-header {
+    height: 400px;
+    width: 100%;
+    background-color: #444444;
+}
+
+#contact-us-title {
+    margin-top:50px;
+    font-family: Montserrat;
+    font-size: 3rem;
 }
 
 #feedback-body {
-    background-image: radial-gradient( circle farthest-corner at -8.9% 51.2%,  rgba(255,124,0,1) 0%, rgba(255,124,0,1) 15.9%, rgba(255,163,77,1) 15.9%, rgba(255,163,77,1) 24.4%, rgba(19,30,37,1) 24.5%, rgba(19,30,37,1) 66% );
+    width:70%;
+    margin-top:50px;
+    font-size: 1rem;
+}
 
+#feedback-form input,#feedback-form textarea {
+    width:50%;
+}
+
+#feedback-div {
+    position: absolute;
+    left: 500px;
+    width: 60%;
+    height: 700px;
+}
+
+#feedback-form {
+    height: 300px;
+}
+#submit-btn {
+    margin-left:90px;
+    margin-right: 60px;
 }
 
 
@@ -459,4 +487,20 @@ h5.card-title{
 }
 
 /*SnackBar*/
+#snackbar{
+    padding-top:30px;
+    width:30%;
+    height:100px;
+    position:absolute;
+    background-color: white;
+    text-align: center;
+    z-index: 1;
+    left:240px;
+    top:1200px;
+}
 
+.disagreement {
+   color:red;
+   text-decoration: underline;
+    
+}

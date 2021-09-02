@@ -44,19 +44,19 @@ session_start();
                 <ul class="navbar-nav">
                     <div id="first-div" class="divs">
                         <li class="nav-item">
-                            <a href="pricing.html" class="nav-link active text-light">Pricing</a>
+                            <a href="pricing.php" class="nav-link active text-light">Pricing</a>
                         </li>
                     </div>
 
                     <div class="mx-3" id="second-div">
                         <li class="nav-item">
-                            <a href="gallery.html" class="nav-link text-light">Gallery</a>
+                            <a href="gallery.php" class="nav-link text-light">Gallery</a>
                         </li>
                     </div>
 
                     <div class="mx-3" id="third-div">
                         <li class="nav-item">
-                            <a href="partners.html" class="nav-link text-light">Partners</a>
+                            <a href="partners.php" class="nav-link text-light">Partners</a>
                         </li>
                     </div>
 
@@ -67,23 +67,23 @@ session_start();
                     </div>
                     <div class="mx-3" id="fifth-div">
                         <li class="nav-item">
-                            <a href="about-us.html" class="nav-link text-light">About Us</a>
+                            <a href="about-us.php" class="nav-link text-light">About Us</a>
                         </li>
                     </div>
                     <div class="" id="log-in">
                         <li class="nav-item">
-                           <a href="index.html" class="nav-link text-light">Log In</a>
+                           <span class="text-white nav-item"><?php echo $_SESSION["username"]; ?> </span>
                         </li>
                     </div>
-                    <div class="mx-3 " id="sign-up">
+                    <div class="mx-3 " id="">
                         <li class="nav-item">
-                            <a href="sign-up.html" class="nav-link text-light">Sign Up</a>
+                            <a href="index.php" class="nav-link text-light btn btn-danger">Log Out</a>
                         </li>
                     </div>
 
                     <div class="mx-1 " id="demo-button">
                         <li class="nav-item">
-                            <a href="demo-request-page.html" class="nav-link btn text-light">Book Demo</a>
+                            <a href="demo-request-page.php" class="nav-link btn text-light">Book Demo</a>
                         </li>
                     </div>
 

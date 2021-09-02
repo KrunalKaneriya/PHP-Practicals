@@ -55,16 +55,28 @@
         $phoneNumberValue = $_POST["number"];
         $emailValue = $_POST["email"];
 
+        $searchQuery = "SELECT * FROM INFO WHERE NAME = '$nameValue' AND EMAIL = '$emailValue';";
 
-        $insert = "INSERT INTO INFO (NAME,PASSWORD,GENDER,PHONENUMBER,EMAIL) VALUES ('$nameValue','$passwordValue','$genderValue','$phoneNumberValue','$emailValue');";
-
-        if($MainConnection->query($insert)) {
-            // echo "Data Inserted...<br>";
+        $searchResult = $MainConnection->query($searchQuery);
+        if($searchResult->num_rows>1) {
+           echo "<script>alert('User Already Registered.')</script>";
+            
         }
         else {
-            // echo "error Adding Data..<br>";
-            $MainConnection->error;
+            $insert = "INSERT INTO INFO (NAME,PASSWORD,GENDER,PHONENUMBER,EMAIL) VALUES ('$nameValue','$passwordValue','$genderValue','$phoneNumberValue','$emailValue');";
+            if($MainConnection->query($insert)) {
+                // echo "Data Inserted...<br>";
+                header("location:index.php");
+            }
+            else {
+                // echo "error Adding Data..<br>";
+                $MainConnection->error;
+            }
         }
+
+
+
+       
 
         $MainConnection->close();
 
@@ -73,6 +85,6 @@
 ?>
 
 <?php 
-    header("location:index.html");
+   
 
 ?>

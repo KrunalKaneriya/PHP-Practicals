@@ -1,3 +1,9 @@
+<?php
+
+session_start();
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -32,27 +38,27 @@
     <nav class="navbar navbar-expand-sm sticky-top">
         <div class="container-fluid">
 
-            <a href="home-page.html" class="navbar-brand mx-3">
-                <img src="images/logo.png" alt="Logo" width="70"><span class="ms-3">DataOInfra</span>
+            <a href="home-page.php" class="navbar-brand mx-3">
+                <img src="images/logo.png" alt="Logo" width="70"><span class="ms-3 text-white">DataOInfra</span>
             </a>
 
             <div class="navbar-collapse collapse">
                 <ul class="navbar-nav">
                     <div id="first-div" class="divs">
                         <li class="nav-item">
-                            <a  href="pricing.html" class="nav-link active text-white">Pricing</a>
+                            <a  href="pricing.php" class="nav-link active text-white">Pricing</a>
                         </li>
                     </div>
 
                     <div class="mx-3" id="second-div">
                         <li class="nav-item">
-                            <a href="gallery.html" class="nav-link  text-white">Gallery</a>
+                            <a href="gallery.php" class="nav-link  text-white">Gallery</a>
                         </li>
                     </div>
 
                     <div class="mx-3" id="third-div">
                         <li class="nav-item">
-                            <a href="partners.html" class="nav-link text-white">Partners</a>
+                            <a href="partners.php" class="nav-link text-white">Partners</a>
                         </li>
                     </div>
 
@@ -63,23 +69,23 @@
                     </div>
                     <div class="mx-3" id="fifth-div">
                         <li class="nav-item">
-                            <a href="about-us.html" class="nav-link text-white">About Us</a>
+                            <a href="about-us.php" class="nav-link text-white">About Us</a>
                         </li>
                     </div>
                     <div class="" id="log-in">
                         <li class="nav-item">
-                            <a href="index.html" class="nav-link text-white">Log In</a>
+                            <span class="text-white nav-item"><?php echo $_SESSION["username"]; ?> </span>
                         </li>
                     </div>
-                    <div class="mx-3 "  id="sign-up">
+                    <div class="mx-3 ">
                         <li class="nav-item">
-                            <a href="sign-up.html" class="nav-link text-white">Sign Up</a>
+                            <a href="index.php" class="nav-link text-light btn btn-danger">Log Out</a>
                         </li>
                     </div>
 
                     <div class="mx-1 " id="demo-button">
                         <li class="nav-item">
-                            <a href="demo-request-page.html" class="nav-link btn text-light">Book Demo</a>
+                            <a href="demo-request-page.php" class="nav-link btn text-light">Book Demo</a>
                         </li>
                     </div>
 

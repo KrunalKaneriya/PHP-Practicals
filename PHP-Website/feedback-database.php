@@ -41,6 +41,6 @@
         echo $MainConnection->error;
     }
     $MainConnection->close();
-    header("location:home-page.html");
+    header("location:home-page.php");
 
 ?>

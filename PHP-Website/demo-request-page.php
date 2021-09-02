@@ -1,3 +1,6 @@
+<?php
+    session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6,12 +9,7 @@
     <title>Request A Demo</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
-        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
-        crossorigin="anonymous"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"
         integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF"
         crossorigin="anonymous"></script>
@@ -28,6 +26,52 @@
     
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="navbar.css">
+    <script type="text/javascript">
+                $(document).ready(function() {
+                    $("#submit-button").click(function (event) {
+                        if($("#agreement").is(":checked")) {
+                            <?php                         
+
+                            $serverName = "localhost";
+                            $databaseName = "WebsiteData";
+                            $userName = "root";
+                            $password = "";
+
+                            $connection = new mysqli($serverName,$userName,$password,$databaseName);
+                            $tableQuery = "CREATE TABLE REQUESTPAGE (
+                                NAME VARCHAR(40),
+                                EMAIL VARCHAR(40),
+                                COMPANYNAME VARCHAR(40),
+                                COUNTRYNAME VARCHAR(40),
+                                PHONENUMBER NUMERIC(20),
+                                MESSAGE VARCHAR(100)
+                            );";
+
+                            $connection->query($tableQuery);
+
+                            $name = $_SESSION["username"];
+                            $email = $_SESSION["email"];
+                            $companyname = $_POST["form-company-name"];
+                            $countryname = $_POST["form-country-name"];
+                            $phonenumber = $_POST["form-number"];
+                            $textAreaContent =htmlspecialchars($_POST["form-message"]);
+                            $textAreaContent = stripslashes($textAreaContent);
+
+                            $insertQuery = "INSERT INTO REQUESTPAGE (NAME,EMAIL,COMPANYNAME,COUNTRYNAME,PHONENUMBER,MESSAGE) VALUES ('$name','$email','$companyname','$countryname','$phonenumber','$textAreaContent');";
+                            $connection->query($insertQuery);
+
+                            $connection->close();
+
+                            ?>
+                        }
+                        else {
+                            $("#snackbar").text("Please Agree In Agreement To Proceed").show().fadeOut(15000);
+                            $("#agreementlabel").css({"color":"red","text-decoration":"underline"});
+                            event.preventDefault();
+                        }
+                    });
+                });
+            </script>
 </head>
 
 <body>
@@ -35,7 +79,7 @@
     <nav class="navbar navbar-expand-sm sticky-top">
         <div class="container-fluid">
 
-            <a href="home-page.html" class="navbar-brand mx-3">
+            <a href="home-page.php" class="navbar-brand mx-3">
                 <img src="images/logo.png" alt="Logo" width="70"><span class="text-light ms-3">DataOInfra</span>
             </a>
 
@@ -43,19 +87,19 @@
                 <ul class="navbar-nav">
                     <div id="first-div" class="divs">
                         <li class="nav-item">
-                            <a href="pricing.html" class="nav-link active text-light">Pricing</a>
+                            <a href="pricing.php" class="nav-link active text-light">Pricing</a>
                         </li>
                     </div>
 
                     <div class="mx-3" id="second-div">
                         <li class="nav-item">
-                            <a href="gallery.html" class="nav-link text-light">Gallery</a>
+                            <a href="gallery.php" class="nav-link text-light">Gallery</a>
                         </li>
                     </div>
 
                     <div class="mx-3" id="third-div">
                         <li class="nav-item">
-                            <a href="partners.html" class="nav-link text-light">Partners</a>
+                            <a href="partners.php" class="nav-link text-light">Partners</a>
                         </li>
                     </div>
 
@@ -66,23 +110,23 @@
                     </div>
                     <div class="mx-3" id="fifth-div">
                         <li class="nav-item">
-                            <a href="about-us.html" class="nav-link text-light">About Us</a>
+                            <a href="about-us.php" class="nav-link text-light">About Us</a>
                         </li>
                     </div>
                     <div class="" id="log-in">
                         <li class="nav-item">
-                            <a href="index.html" class="nav-link text-light">Log In</a>
+                        <span class="text-white nav-item"><?php echo $_SESSION["username"]; ?> </span>
                         </li>
                     </div>
                     <div class="mx-3 " id="sign-up">
                         <li class="nav-item">
-                            <a href="sign-up.html" class="nav-link text-light">Sign Up</a>
+                        <a href="index.php" class="nav-link text-light btn btn-danger">Log Out</a>
                         </li>
                     </div>
 
                     <div class="mx-1 " id="demo-button">
                         <li class="nav-item">
-                            <a href="demo-request-page.html" class="nav-link btn text-light">Book Demo</a>
+                            <a href="demo-request-page.php" class="nav-link btn text-light">Book Demo</a>
                         </li>
                     </div>
 
@@ -144,20 +188,21 @@
                             </div>
 
                             <div class="request-form-body">
-                                <form action="" method="post">
+                                <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="post">
                                     <p class="text-muted">Name</p>
                                     <input type="text" class="form-control form-control-sm" placeholder="Enter Name"
-                                        name="form-name">
+                                        name="form-name" value="<?php  echo $_SESSION['username'];  ?>" disabled>
 
                                     <p class="text-muted mt-3">Business Email</p>
-                                    <input type="text" name="form-email" id="" class="form-control form-control-sm" placeholder="Enter Email">
+                                    <input type="text" disabled name="form-email" id="" class="form-control form-control-sm" placeholder="Enter Email"
+                                    value="<?php echo $_SESSION["email"]; ?>" > 
 
                                     <p class="text-muted mt-3">Company Name</p>
                                     <input type="text" name="form-company-name" id=""
                                         class="form-control form-control-sm" placeholder="Company Name">
 
                                     <p class="text-muted mt-2">Country Name</p>
-                                    <input type="text" name="form-country" id="" class="form-control form-control-sm" placeholder="Country">
+                                    <input type="text" name="form-country-name" id="" class="form-control form-control-sm" placeholder="Country">
 
                                     <p class="text-muted mt-2">Phone Number</p>
                                     <input type="number" name="form-number" id="" class="form-control form-control-sm" placeholder="Phone Number">
@@ -169,20 +214,26 @@
                                     <div class="mt-4">
                                         <input type="checkbox" name="form-agreement" id="agreement"
                                             class="form-check-input mx-2">
-                                        <label for="agreement" >I Agree to the Terms And Conditions And
+                                        <label for="agreement" id="agreementlabel">I Agree to the Terms And Conditions And
                                             Privacy Policy</label>
                                     </div>
 
                                     <div>
-                                        <button type="submit" class="btn btn-primary form-control mt-5 submit-button">Book A Free Demo</button>
+                                        <button type="submit" id="submit-button" class="btn btn-primary form-control mt-5 submit-button">Book A Free Demo</button>
                                     </div>
                                 </form>
+
+                                <span id="snackbar"></span>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+            
 
+
+
+           
 
 
         </section>
@@ -256,6 +307,7 @@
 
 
     </footer>
+
 
 </body>
 
