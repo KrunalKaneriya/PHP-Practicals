@@ -36,7 +36,7 @@ session_start();
     <nav class="navbar navbar-expand-sm sticky-top">
         <div class="container-fluid">
 
-            <a href="home-page.html" class="navbar-brand mx-3">
+            <a href="home-page.php" class="navbar-brand mx-3">
                 <img src="images/logo.png" alt="Logo" width="70"><span class="text-light ms-3">DataOInfra</span>
             </a>
 
@@ -73,7 +73,6 @@ session_start();
                     <div class="" id="log-in">
                         <li class="nav-item">
                            <a href="index.html" class="nav-link text-light">Log In</a>
-                           
                         </li>
                     </div>
                     <div class="mx-3 " id="sign-up">

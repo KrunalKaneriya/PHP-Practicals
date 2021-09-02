@@ -31,7 +31,7 @@
             $_SESSION["email"] = $row["EMAIL"];
     
             // echo "<h1>Welcome  ". $_SESSION["username"] . "</h1>";
-            header("location:home-page.php");
+            header("location:home-page.html");
         }
 
         else  {
