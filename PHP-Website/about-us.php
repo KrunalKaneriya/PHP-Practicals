@@ -1,4 +1,18 @@
-<?php session_start(); ?>
+<?php
+    session_start();
+    $serverName = "localhost";
+    $password = "";
+    $username = "root";
+    $dbname = "WebsiteData";
+    
+    $sql = new mysqli($serverName,$username,$password,$dbname);
+
+    $sqlQuery = "SELECT * FROM FEEDBACK ORDER BY NAME;";
+    $feedbackdata = $sql->query($sqlQuery);
+    $sql->close();
+
+
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -68,9 +82,9 @@
                             <span class="text-white nav-item"><?php echo $_SESSION["username"]; ?> </span>
                         </li>
                     </div>
-                    <div class="mx-3 " id="sign-up">
+                    <div class="mx-3 ">
                         <li class="nav-item">
-                            <a href="index.php" class="nav-link text-light btn btn-danger">Log Out</a>
+                            <a href="index.html" class="nav-link text-light btn btn-danger">Log Out</a>
                         </li>
                     </div>
 
@@ -137,7 +151,40 @@
 
         </div>
 
-        <footer class="container-fluid mt-5">
+        <div id="feedbacks-customers" class="text-center container-fluid">
+            <div id="feedback-customers-header">
+                <h3 class="text-black">Feedbacks By Our Customers</h3>
+            </div>
+
+            <div id="feedback-customers-body">
+                <table class="table table-bordered table-responsive-sm h-auto">
+                    <tr>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Details</th>
+                    </tr>
+
+                    <?php while($rows = $feedbackdata->fetch_assoc())
+                        {
+
+                    ?> 
+                    <tr>
+                        <td><?php echo $rows["NAME"];?></td>
+                        <td><?php echo $rows["EMAIL"];?></td>
+                        <td><?php echo $rows["DETAILS"];?></td>
+                    </tr>       
+                    <?php 
+
+                        }
+
+                    ?>
+
+                </table>
+            </div>
+
+        </div>
+
+        <footer class="container-fluid mt-5" id = "footer-about-us">
 
             <div class="row">
                 <div class="col">
@@ -185,13 +232,13 @@
                         <h5 class="text-center">Our Links</h5>
                         <div id="company-links-list">
                             <ul>
-                                <li>Home Page</li>
-                                <li>Gallery</li>
-                                <li>Feedback Page</li>
-                                <li>Partners Page</li>
-                                <li>Pricing</li>
-                                <li>Log In</li>
-                                <li>Sign Up</li>
+                                <li><a href="home-page.php">Home Page</a></li>
+                                <li><a href = "gallery.php">Gallery</a></li>
+                                <li><a href = "feedback.php">Feedback Page</a></li>
+                                <li><a href = "partners.php">Partners Page</a></li>
+                                <li><a href ="pricing.php">Pricing</a></li>
+                                <li><a href = "index.html">Log In</a></li>
+                                <li><a href = "sign-up.html">Sign Up</a></li>
                             </ul>
                         </div>
     

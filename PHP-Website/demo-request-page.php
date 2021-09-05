@@ -26,7 +26,12 @@
     
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="navbar.css">
-    <script type="text/javascript">
+    
+</head>
+
+<body>
+
+<script>
                 $(document).ready(function() {
                     $("#submit-button").click(function (event) {
                         if($("#agreement").is(":checked")) {
@@ -64,17 +69,9 @@
 
                             ?>
                         }
-                        else {
-                            $("#snackbar").text("Please Agree In Agreement To Proceed").show().fadeOut(15000);
-                            $("#agreementlabel").css({"color":"red","text-decoration":"underline"});
-                            event.preventDefault();
-                        }
                     });
                 });
             </script>
-</head>
-
-<body>
 
     <nav class="navbar navbar-expand-sm sticky-top">
         <div class="container-fluid">
@@ -118,9 +115,9 @@
                         <span class="text-white nav-item"><?php echo $_SESSION["username"]; ?> </span>
                         </li>
                     </div>
-                    <div class="mx-3 " id="sign-up">
+                    <div class="mx-3 ">
                         <li class="nav-item">
-                        <a href="index.php" class="nav-link text-light btn btn-danger">Log Out</a>
+                        <a href="index.html" class="nav-link text-light btn btn-danger">Log Out</a>
                         </li>
                     </div>
 
@@ -209,11 +206,11 @@
 
                                     <p class="text-muted mt-3">Message</p>
                                     <textarea name="form-message" id="" cols="10" rows="5"
-                                        class="form-control" placeholder="Enter Message Here" required></textarea>
+                                        class="form-control" placeholder="Enter Message Here"></textarea>
 
                                     <div class="mt-4">
                                         <input type="checkbox" name="form-agreement" id="agreement"
-                                            class="form-check-input mx-2">
+                                            class="form-check-input mx-2" required>
                                         <label for="agreement" id="agreementlabel">I Agree to the Terms And Conditions And
                                             Privacy Policy</label>
                                     </div>
@@ -288,13 +285,13 @@
                     <h5 class="text-center">Our Links</h5>
                     <div id="company-links-list">
                         <ul>
-                            <li>Home Page</li>
-                            <li>Gallery</li>
-                            <li>Feedback Page</li>
-                            <li>Partners Page</li>
-                            <li>Pricing</li>
-                            <li>Log In</li>
-                            <li>Sign Up</li>
+                        <li><a href="home-page.php">Home Page</a></li>
+                                <li><a href = "gallery.php">Gallery</a></li>
+                                <li><a href = "feedback.php">Feedback Page</a></li>
+                                <li><a href = "partners.php">Partners Page</a></li>
+                                <li><a href ="pricing.php">Pricing</a></li>
+                                <li><a href = "index.html">Log In</a></li>
+                                <li><a href = "sign-up.html">Sign Up</a></li>
                         </ul>
                     </div>
 
@@ -307,7 +304,7 @@
 
 
     </footer>
-
+   
 
 </body>
 

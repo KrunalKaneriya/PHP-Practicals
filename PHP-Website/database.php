@@ -58,7 +58,7 @@
         $searchQuery = "SELECT * FROM INFO WHERE NAME = '$nameValue' AND EMAIL = '$emailValue';";
 
         $searchResult = $MainConnection->query($searchQuery);
-        if($searchResult->num_rows>1) {
+        if($searchResult->num_rows>=1) {
            echo "<script>alert('User Already Registered.')</script>";
             
         }
@@ -66,7 +66,7 @@
             $insert = "INSERT INTO INFO (NAME,PASSWORD,GENDER,PHONENUMBER,EMAIL) VALUES ('$nameValue','$passwordValue','$genderValue','$phoneNumberValue','$emailValue');";
             if($MainConnection->query($insert)) {
                 // echo "Data Inserted...<br>";
-                header("location:index.php");
+                header("location:index.html");
             }
             else {
                 // echo "error Adding Data..<br>";

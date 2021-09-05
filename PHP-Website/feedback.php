@@ -29,6 +29,21 @@ session_start();
 
     <link rel="stylesheet" href="navbar.css">
     <link rel="stylesheet" href="styles.css">
+
+    <script type = "text/javascript">
+        $(document).ready(function() {
+            $("#submit-btn").click(function(event) {
+                var textareacontent = $("#messagetextarea").val();
+                if(textareacontent == ""){
+                    alert("Enter A Message...");
+                    event.preventDefault();
+                }
+                else {
+                    
+                }
+            });
+        });
+    </script>
 </head>
 
 <body>
@@ -78,7 +93,7 @@ session_start();
                     </div>
                     <div class="mx-3 " id="">
                         <li class="nav-item">
-                            <a href="index.php" class="nav-link text-light btn btn-danger">Log Out</a>
+                            <a href="index.html" class="nav-link text-light btn btn-danger">Log Out</a>
                         </li>
                     </div>
 
@@ -129,7 +144,8 @@ session_start();
             <div class="row">
                 <div class="col">
                     <label for="message" class="form-label mt-4">Message</label>
-                    <textarea name="message" id="message" cols="55" rows="5" class="form-control"></textarea>
+                    <textarea name="message" id="messagetextarea" cols="55" rows="5" class="form-control"></textarea>
+
                 </div>
             </div>
 
@@ -191,13 +207,13 @@ session_start();
                     <h5 class="text-center">Our Links</h5>
                     <div id="company-links-list">
                         <ul>
-                            <li>Home Page</li>
-                            <li>Gallery</li>
-                            <li>Feedback Page</li>
-                            <li>Partners Page</li>
-                            <li>Pricing</li>
-                            <li>Log In</li>
-                            <li>Sign Up</li>
+                        <li><a href="home-page.php">Home Page</a></li>
+                                <li><a href = "gallery.php">Gallery</a></li>
+                                <li><a href = "feedback.php">Feedback Page</a></li>
+                                <li><a href = "partners.php">Partners Page</a></li>
+                                <li><a href ="pricing.php">Pricing</a></li>
+                                <li><a href = "index.html">Log In</a></li>
+                                <li><a href = "sign-up.html">Sign Up</a></li>
                         </ul>
                     </div>
 

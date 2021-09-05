@@ -32,7 +32,7 @@
         else  {
             echo '<script type = "text/JavaScript">
                 alert("Error In Name or Password");
-                window.location.href = "index.php";
+                window.location.href = "index.html";
             </script>';
 
             

@@ -371,6 +371,15 @@ footer {
     
 }
 
+#footer-about-us {
+    width:100%;
+    height: 300px;
+    position: relative;
+    top:90px;
+    background-color: white;
+    font-family: "Montserrat";
+}
+
 footer h5 {
     font-weight: 600;
 }
@@ -403,6 +412,12 @@ footer h5 {
     width:50%;
     /* margin-left:90px; */
 }
+
+#company-links-list a{
+    /* text-decoration: none; */
+    color:black;
+}
+
 
 .buttons {
     width:420px;
@@ -483,7 +498,7 @@ h5.card-title{
 
 #about-us-info {
     width: 70%;
-    height: 300px;
+    height: 510px;
 }
 
 /*SnackBar*/
@@ -492,7 +507,7 @@ h5.card-title{
     width:30%;
     height:100px;
     position:absolute;
-    background-color: white;
+    background-color: lightsalmon;
     text-align: center;
     z-index: 1;
     left:240px;
@@ -503,4 +518,19 @@ h5.card-title{
    color:red;
    text-decoration: underline;
     
+}
+
+/*****************************************Feedbacks By Customers CSS****************************************/
+#feedbacks-customers{
+   /* height:400px; */
+   margin-top:90px;
+   
+}
+
+#feedback-customers-header {
+    margin-bottom: 60px;
+}
+
+#feedback-customers-body {
+    overflow: auto;
 }
