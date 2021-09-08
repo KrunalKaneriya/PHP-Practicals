@@ -9,6 +9,8 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
         crossorigin="anonymous"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
         integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
         crossorigin="anonymous"></script>
@@ -25,9 +27,18 @@
         <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="navbar.css">
     <link rel="stylesheet" href="gallery.css">
+    <script type="text/javascript">
+        setTimeout(function() {
+            $(".loader").fadeOut();
+            $("nav").addClass("sticky-top");
+        }, 2000);
+    </script>
 </head>
 
 <body>
+    <div class="loader" style="background-color: aliceblue; position:fixed; visibility: visible; height: 768px; width: 100%; z-index: 5;">
+        <img style="position: relative; left:630px; top: 240px;" src="images/Preloader_1.gif" alt="">
+    </div>
     
     <nav class="navbar navbar-expand-sm">
         <div class="container-fluid">

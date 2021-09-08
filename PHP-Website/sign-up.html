@@ -24,9 +24,21 @@
 
         <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="navbar.css">
+
+    <script type="text/javascript">
+        setTimeout(function() {
+            $(".loader").fadeOut();
+            $("nav").addClass("sticky-top");
+        }, 2000);
+    </script>
 </head>
 
 <body id = "body-section" style="background-color: #444444;">
+
+    <div class="loader" style="background-color: aliceblue; position:fixed; visibility: visible; height: 768px; width: 100%; z-index: 5;">
+        <img style="position: relative; left:630px; top: 240px;" src="images/Preloader_1.gif" alt="">
+    </div>
+
     <h1 id="title" class="display-2 text-white">DataOInfra</h1>
 
     <div class = "main-animation">

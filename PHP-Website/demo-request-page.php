@@ -26,10 +26,23 @@
     
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="navbar.css">
+
+    <script type="text/javascript">
+       setTimeout(function() {
+           $(".loader").fadeOut();
+           $("nav").addClass("sticky-top");
+        },2000);
+
+        
+    </script>
     
 </head>
 
 <body>
+
+    <div class="loader" style="background-color: aliceblue; position:fixed; visibility: visible; height: 768px; width: 100%; z-index: 5;">
+        <img style="position: relative; left:630px; top: 240px;" src="images/Preloader_1.gif" alt="">
+   </div>
 
 <script>
                 $(document).ready(function() {
@@ -73,7 +86,7 @@
                 });
             </script>
 
-    <nav class="navbar navbar-expand-sm sticky-top">
+    <nav class="navbar navbar-expand-sm">
         <div class="container-fluid">
 
             <a href="home-page.php" class="navbar-brand mx-3">
@@ -220,7 +233,7 @@
                                     </div>
                                 </form>
 
-                                <span id="snackbar"></span>
+                                
                             </div>
                         </div>
                     </div>

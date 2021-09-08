@@ -1,6 +1,3 @@
-html {
-    height:100%;
-}
 
 
 #signup {
@@ -533,4 +530,11 @@ h5.card-title{
 
 #feedback-customers-body {
     overflow: auto;
+}
+
+/****************************************Confirm Box Dialog CSS*********************************/
+#confirm-box {
+    height:100px;
+    width:100%;
+    text-align: center;
 }

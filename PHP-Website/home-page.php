@@ -22,18 +22,28 @@ session_start();
     <link
         href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Open+Sans:wght@400;600;700;800&family=Roboto:wght@300;400;700&family=Source+Sans+Pro:wght@300;400;600;700&family=Open+Sans:wght@300;400;600;700;800&family=Lato:wght@300;400;700;900&family=Ubuntu:wght@300;400;500;700&display=swap"
         rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
         integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
 
         <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="navbar.css">
+    <script type="text/javascript">
+        setTimeout(function() {
+            $(".loader").fadeOut();
+            $("nav").addClass("sticky-top");
+        }, 2000);
+    </script>
 </head>
 
 
 <body id="home-page-body">
 
-    <nav class="navbar navbar-expand-sm sticky-top">
+    <div class="loader" style="background-color: aliceblue; position:fixed; visibility: visible; height: 768px; width: 100%; z-index: 5;">
+        <img style="position: fixed; left:630px; top: 240px;" src="images/Preloader_1.gif" alt="">
+    </div>
+    <nav class="navbar navbar-expand-sm">
         <div class="container-fluid">
 
             <a href="home-page.php" class="navbar-brand mx-3">
