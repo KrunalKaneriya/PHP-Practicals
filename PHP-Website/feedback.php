@@ -44,7 +44,7 @@ session_start();
 
 <body>
     <div class="loader" style="background-color: aliceblue; position:fixed; visibility: visible; height: 768px; width: 100%; z-index: 5;">
-        <img style="position: relative; left:630px; top: 240px;" src="images/Preloader_1.gif" alt="">
+        <img style="position: relative; left:450px; top: 80px;" src="images/loading.gif" alt="">
     </div>
     <nav class="navbar navbar-expand-sm ">
         <div class="container-fluid">
