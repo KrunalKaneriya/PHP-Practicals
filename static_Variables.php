@@ -10,6 +10,7 @@
             $value = 1;
             echo "The Value of Without Static Function is $value<br>";
             $value++;
+            
         }
         withoutStatic();
         withoutStatic();
